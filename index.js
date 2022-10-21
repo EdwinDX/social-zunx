@@ -18,12 +18,12 @@ connectToDB(process.env.MONGO_URL);
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'build')));
+// app.use(express.static(path.join(__dirname, 'build')));
 
 
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// app.get('/*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 
 app.get("/", (req, res) => {
   res.status(200).json({
